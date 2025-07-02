@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atelier d'Interni Creativi S.r.l.</title>
+    <meta name="keywords" content="progettazione arredamento su misura,soluzioni d'arredo sostenibili,design interno innovativo,arredamento residenziale personalizzato,arredamento commerciale unico,sostenibilità nell'arredamento,idee di design d'interni,arredo eco-friendly,creatività in design d'interni,innovazioni nel design sostenibile,progettazione spazi commerciali,arredamento funzionale su misura,consulenza arredo d'interni,interior design su misura,trend design sostenibile,arredo personalizzato per aziende,estetica e funzionalità nell'arredamento,materiali eco-sostenibili per mobili,progetti di arredo innovativi,consigli di design per casa">
+    <!-- Nuovi Font da Google Fonts: Poppins (Titoli, 800 per più impatto) e Inter (Corpo, 400-600 per leggibilità) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome per le icone social -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff; /* Blu brillante per il brand, leggermente più vivace */
+            --secondary-color: #2c3e50; /* Blu scuro/antracite per il testo principale */
+            --accent-color: #28a745; /* Verde per elementi interattivi e highlights */
+            --background-light: #f5f8fa; /* Sfondo generale molto chiaro e pulito */
+            --text-dark: #34495e; /* Grigio-blu scuro per il testo del corpo */
+            --card-background: #ffffff; /* Sfondo delle card/container */
+            --border-color: #e9ecef; /* Colore del bordo molto sottile */
+            
+            /* Nuove variabili per ombre più raffinate */
+            --shadow-subtle: rgba(0, 0, 0, 0.03); /* Ombra appena percettibile */
+            --shadow-soft: rgba(0, 0, 0, 0.06); /* Ombra leggera per elementi */
+            --shadow-medium: rgba(0, 0, 0, 0.12); /* Ombra standard per elevazione */
+            --shadow-strong: rgba(0, 0, 0, 0.20); /* Ombra più scura per hover/prominenza */
+            
+            --footer-bg: #212529; /* Sfondo footer scuro */
+            --footer-text: #ced4da; /* Testo footer grigio chiaro */
+            --transition-speed: 0.3s; /* Velocità standard per le transizioni, leggermente più veloce */
+            --border-radius-main: 15px; /* Raggio del bordo per container principali, ridotto */
+            --border-radius-card: 10px; /* Raggio del bordo per card interne, ridotto */
+
+            /* Colori brand specifici per i social media */
+            --facebook-color: #3b5998;
+            --instagram-color: #E4405F; /* Un colore rappresentativo per Instagram */
+            --google-color: #DB4437; /* Colore rosso di Google */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Corpo del testo, leggero e leggibile */
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.55; /* Interlinea ulteriormente ridotta per compattezza */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased; /* Migliora il rendering del font */
+            -moz-osx-font-smoothing: grayscale; /* Migliora il rendering del font */
+        }
+
+        .container {
+            max-width: 900px; /* Larghezza ulteriormente ridotta per un look più compatto */
+            margin: 35px auto; /* Margine ridotto */
+            padding: 35px 45px; /* Padding ridotto */
+            background-color: var(--card-background);
+            border-radius: var(--border-radius-main);
+            box-shadow: 0 12px 25px var(--shadow-medium); /* Ombra leggermente ridotta */
+            flex-grow: 1;
+            text-align: center;
+            transition: box-shadow var(--transition-speed) ease-out, transform var(--transition-speed) ease-out;
+        }
+        .container:hover {
+            box-shadow: 0 18px 35px var(--shadow-strong); /* Ombra meno intensa all'hover */
+            transform: translateY(-2px); /* Leggero sollevamento all'hover */
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-size: 3em; /* Dimensione ridotta */
+            letter-spacing: -0.03em;
+            text-shadow: 1px 1px 2px var(--shadow-subtle);
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 40px; /* Margine ridotto */
+            font-size: 1.8em; /* Dimensione ridotta */
+            line-height: 1.3;
+            text-shadow: 0.5px 0.5px 1.5px var(--shadow-subtle);
+        }
+
+        .main-image {
+            width: 100%;
+            max-height: 350px; /* Altezza ulteriormente ridotta */
+            object-fit: cover;
+            display: block; 
+            margin: 0 auto 40px auto; /* Margine ridotto */
+            border-radius: var(--border-radius-card);
+            box-shadow: 0 6px 15px var(--shadow-medium); /* Ombra ridotta */
+            transition: transform var(--transition-speed) ease-out, box-shadow var(--transition-speed) ease-out;
+        }
+        .main-image:hover {
+            transform: scale(1.001); /* Zoom ancora più sottile */
+            box-shadow: 0 8px 20px var(--shadow-strong); /* Ombra ridotta all'hover */
+        }
+
+        .home-content {
+            font-size: 0.95em; /* Testo ulteriormente ridotto */
+            color: var(--text-dark);
+            margin-bottom: 40px; /* Spazio ridotto */
+            text-align: justify;
+            max-width: 100%; /* Permette di usare tutta la larghezza disponibile nel container ridotto */
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5; /* Interlinea ulteriormente ridotta */
+        }
+        .home-content p {
+            margin-bottom: 0.8em; /* Spazio tra paragrafi ridotto */
+        }
+
+        .article-list {
+            margin-top: 50px; /* Spazio ridotto prima della lista articoli */
+            text-align: left;
+        }
+
+        .article-list h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 2.5em; /* Dimensione ridotta */
+            margin-bottom: 40px; /* Spazio ridotto sotto il titolo */
+            text-align: center;
+            text-shadow: 0.5px 0.5px 1.5px var(--shadow-subtle);
+        }
+
+        .article-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            margin-bottom: 45px; /* Spazio ridotto tra i gruppi di articoli */
+            border-radius: var(--border-radius-main);
+            overflow: hidden;
+            box-shadow: 0 10px 25px var(--shadow-medium); /* Ombra ridotta */
+            transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
+        }
+        /* Effetto hover per i gruppi di articoli: sollevamento e ombra più scura */
+        .article-group:hover {
+            transform: translateY(-4px); /* Sollevamento ridotto */
+            box-shadow: 0 15px 35px var(--shadow-strong); /* Ombra ridotta all'hover */
+        }
+
+        /* Nuovo contenitore per il testo degli articoli all'interno del gruppo */
+        .article-text-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px; /* Padding ridotto */
+            background-color: var(--card-background);
+            position: relative;
+        }
+
+        /* Stili per le singole article-card all'interno di article-text-container */
+        .article-text-container .article-card {
+            padding: 0;
+            border: none;
+            flex: 0 0 auto;
+            width: 100%;
+            margin-bottom: 15px; /* Spazio tra le card impilate ridotto */
+        }
+        /* Rimuovi margine dopo l'ultima card impilata */
+        .article-text-container .article-card:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        /* Linea di separazione verticale tra contenitore testo e immagine */
+        .article-group .article-text-container {
+            border-right: 1px solid var(--border-color); 
+        }
+        /* Per i gruppi pari, inverti la direzione e la linea di separazione */
+        .article-group:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .article-group:nth-child(even) .article-text-container {
+            border-right: none;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .article-image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            min-height: 220px; /* Altezza minima ulteriormente ridotta */
+            overflow: hidden;
+            border-radius: 0 var(--border-radius-card) var(--border-radius-card) 0;
+        }
+        .article-group:nth-child(even) .article-image-container {
+            border-radius: var(--border-radius-card) 0 0 var(--border-radius-card);
+        }
+
+
+        .article-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 0;
+            transition: transform var(--transition-speed) ease-out;
+        }
+        .article-image-container:hover img {
+            transform: scale(1.02); /* Zoom leggero ridotto */
+        }
+
+        .article-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.4em; /* Dimensione ulteriormente ridotta */
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 10px; /* Margine ridotto */
+            line-height: 1.2;
+        }
+
+        .article-card p {
+            font-size: 0.85em; /* Testo ulteriormente ridotto */
+            color: var(--text-dark);
+            margin-bottom: 15px; /* Margine ridotto */
+            line-height: 1.45;
+        }
+
+        .article-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color var(--transition-speed) ease-in-out;
+            display: inline-block;
+        }
+
+        .article-card a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        /* Bottone "Leggi di più" più stilizzato */
+        .article-card a.read-more-btn {
+            background-color: var(--primary-color);
+            color: var(--card-background);
+            padding: 8px 18px; /* Padding ridotto */
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.75em; /* Dimensione ridotta */
+            letter-spacing: 0.03em;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombra ridotta */
+            transition: background-color var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
+        }
+        .article-card a.read-more-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-1px); /* Sollevamento ridotto */
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Ombra ridotta */
+            text-decoration: none;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 35px 20px; /* Padding ridotto */
+            text-align: center;
+            font-size: 0.85em; /* Dimensione ridotta */
+            margin-top: 60px; /* Spazio ridotto dal contenuto */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .site-footer p {
+            margin: 5px 0; /* Spazio tra paragrafi del footer ridotto */
+        }
+        .site-footer a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+        .site-footer a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Stili per i link social all'interno del footer */
+        .footer-social-links { 
+            margin-top: 20px; /* Spazio ridotto */
+            margin-bottom: 20px; 
+        }
+        .footer-social-links a {
+            display: inline-block;
+            margin: 0 15px; /* Spazio ridotto tra le icone */
+            font-size: 1.1em; /* Icone ridotte */
+            /* Rimuove il colore dal var(--footer-text) per applicare colori specifici */
+            color: inherit; 
+            text-decoration: none;
+            transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease; /* Aggiunge transizione opacity */
+            opacity: 0.8; /* Base opacity per un look più morbido */
+        }
+        /* Colori originali dei social media per le icone */
+        .footer-social-links a.facebook-icon .fab.fa-facebook-f { color: var(--facebook-color); }
+        .footer-social-links a.instagram-icon .fab.fa-instagram { color: var(--instagram-color); }
+        .footer-social-links a.google-icon .fab.fa-google { color: var(--google-color); }
+
+        .footer-social-links a:hover {
+            transform: translateY(-3px); /* Effetto hover ridotto */
+            opacity: 1; /* Aumenta l'opacità all'hover */
+        }
+        .footer-social-links .fab, .footer-social-links .fas { 
+            font-size: 2.2em; /* Icone ridotte */
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 1200px) { /* Desktop più piccoli / Laptop */
+            .container { max-width: 800px; padding: 25px 35px; }
+            h1 { font-size: 2.4em; }
+            h2 { font-size: 1.4em; }
+            .main-image { max-height: 300px; margin-bottom: 35px; }
+            .home-content { font-size: 0.9em; }
+            .article-list h3 { font-size: 2em; margin-bottom: 35px; }
+            .article-card h4 { font-size: 1.3em; }
+            .article-card p { font-size: 0.8em; }
+            .article-image-container { min-height: 200px; }
+            .article-card a.read-more-btn { padding: 6px 15px; font-size: 0.7em; }
+            .footer-social-links a { margin: 0 10px; font-size: 1em; }
+            .footer-social-links .fab, .footer-social-links .fas { font-size: 2em; }
+            .site-footer { padding: 40px 20px; margin-top: 60px; }
+        }
+
+        @media (max-width: 992px) { /* Tablet */
+            .container {
+                margin: 20px auto;
+                padding: 20px 25px;
+            }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.2em; margin-bottom: 25px; }
+            .main-image { max-height: 250px; margin-bottom: 30px; }
+            .home-content { font-size: 0.85em; max-width: 100%; }
+            .article-list h3 { font-size: 1.6em; margin-bottom: 25px;}
+            .article-group {
+                margin-bottom: 30px;
+            }
+            .article-text-container {
+                padding: 25px;
+            }
+            .article-text-container .article-card {
+                margin-bottom: 10px;
+            }
+            .article-image-container {
+                min-height: 180px;
+            }
+            .article-card h4 { font-size: 1.1em; margin-bottom: 6px; }
+            .article-card p { font-size: 0.75em; margin-bottom: 15px; }
+            .article-card a.read-more-btn { padding: 5px 12px; font-size: 0.65em; }
+            .site-footer { padding: 30px 10px; margin-top: 40px; }
+            .footer-social-links a { margin: 0 8px; font-size: 0.9em; }
+            .footer-social-links .fab, .footer-social-links .fas { font-size: 1.6em; }
+        }
+
+        @media (max-width: 768px) { /* Small tablet / Large mobile */
+            .container { padding: 15px 10px; margin: 10px auto; }
+            h1 { font-size: 1.6em; margin-bottom: 8px; }
+            h2 { font-size: 1em; margin-bottom: 20px; }
+            .main-image { max-height: 180px; margin-bottom: 20px; }
+            .home-content { font-size: 0.75em; line-height: 1.4; }
+            .article-list h3 { font-size: 1.4em; margin-bottom: 20px; }
+            .article-group { margin-bottom: 20px; }
+            .article-card { padding: 18px; }
+            .article-card h4 { font-size: 1em; }
+            .article-card p { font-size: 0.7em; }
+            .article-text-container { padding: 20px; }
+            .article-image-container { min-height: 140px; }
+            .site-footer { padding: 25px 8px; margin-top: 30px; }
+        }
+
+        @media (max-width: 576px) { /* Mobile */
+            h1 { font-size: 1.3em; }
+            h2 { font-size: 0.85em; }
+            .article-list h3 { font-size: 1.2em; }
+            .article-card h4 { font-size: 0.9em; }
+            .article-card p { font-size: 0.65em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Atelier d'Interni Creativi S.r.l.</h1>
+        <h2>Explore our articles on Progettazione e realizzazione di soluzioni d'arredo su misura per spazi residenziali e commerciali, con un focus sul design sostenibile e innovativo.</h2>
+        <img src="images/home_image_dalle_3dcc6b76.png" alt="Immagine principale dell'azienda" class="main-image">
+        <div class="home-content">
+            
+    <p>Benvenuti sul sito di <strong>Atelier d'Interni Creativi S.r.l.</strong>, 
+    specializzata in <strong>Progettazione e realizzazione di soluzioni d'arredo su misura per spazi residenziali e commerciali, con un focus sul design sostenibile e innovativo.</strong>. 
+    Siamo qui per fornirti informazioni approfondite sul nostro settore e sui nostri servizi. 
+    Scopri come i nostri punti di forza, come <em></em>, 
+    possono aiutare i nostri clienti.</p>
+    <p>Di seguito trovi una selezione dei nostri articoli più recenti, pensati per offrirti spunti e conoscenze utili.</p>
+    
+        </div>
+
+        <div class="article-list">
+            <h3>I nostri articoli:</h3>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_1_progettazione-arredamento-su-misura-soluzioni-innovative-e-sostenibili-per-spazi-unici.html">Progettazione Arredamento su Misura: Soluzioni Innovative e Sostenibili per Spazi Unici</a></h4>
+                            <p>Scopri come Atelier d'Interni Creativi S.r.l. trasforma i tuoi spazi in ambienti unici attraverso un design su misura e sostenibile.</p>
+                            <p><p>In un mondo dove l'unicità e la personalizzazione sono sempre più ricercate, la progettazione arredamento su misura emerge come la soluzione ideale per chi desidera spazi distintivi e funzionali. Atelier d'Interni Creativi S.r.l. si distingue nel ...</p>
+                            <a href="articolo_1_progettazione-arredamento-su-misura-soluzioni-innovative-e-sostenibili-per-spazi-unici.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_2_soluzioni-darredo-sostenibili-innovazione-e-design-per-ogni-spazio.html">Soluzioni d'Arredo Sostenibili: Innovazione e Design per Ogni Spazio</a></h4>
+                                <p>Scopri come Atelier d'Interni Creativi S.r.l. trasforma ogni ambiente con design su misura e sostenibile</p>
+                                <p><p>Nell’era moderna, l'attenzione verso l'ambiente è diventata fondamentale in ogni settore, e l'arredamento non è da meno. Atelier d'Interni Creativi S.r.l. si distingue nella progettazione e realizzazione di soluzioni d'arredo sostenibili, combinan...</p>
+                                <a href="articolo_2_soluzioni-darredo-sostenibili-innovazione-e-design-per-ogni-spazio.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_1_main_f72dc3d7.png" alt="Immagine per Progettazione Arredamento su Misura: Soluzioni Innovative e Sostenibili per Spazi Unici">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_3_design-interno-innovativo-soluzioni-su-misura-per-ogni-spazio.html">Design Interno Innovativo: Soluzioni su Misura per Ogni Spazio</a></h4>
+                            <p>Scopri come Atelier d'Interni Creativi S.r.l. trasforma i tuoi ambienti con un approccio sostenibile e all'avanguardia</p>
+                            <p><p>Il design interno innovativo sta ridefinendo il modo in cui viviamo e lavoriamo nei nostri spazi quotidiani. Atelier d'Interni Creativi S.r.l. è un pioniere in questo campo, offrendo soluzioni d'arredo su misura che uniscono estetica, funzionalità...</p>
+                            <a href="articolo_3_design-interno-innovativo-soluzioni-su-misura-per-ogni-spazio.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_4_arredamento-residenziale-personalizzato-innovazione-e-sostenibilità-per-la-tua-casa.html">Arredamento Residenziale Personalizzato: Innovazione e Sostenibilità per la Tua Casa</a></h4>
+                                <p>Scopri le soluzioni su misura per trasformare i tuoi spazi abitativi con un design sostenibile.</p>
+                                <p><p>Immagina una casa che rifletta perfettamente la tua personalità e rispetti l'ambiente: 'Atelier d'Interni Creativi S.r.l.' realizza questo sogno con la sua proposta di arredamento residenziale personalizzato. L'azienda si distingue per il connubio...</p>
+                                <a href="articolo_4_arredamento-residenziale-personalizzato-innovazione-e-sostenibilità-per-la-tua-casa.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_3_main_cbaf85cb.png" alt="Immagine per Design Interno Innovativo: Soluzioni su Misura per Ogni Spazio">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_5_arredamento-commerciale-unico-innovazione-sostenibile-per-spazi-contemporanei.html">Arredamento Commerciale Unico: Innovazione Sostenibile per Spazi Contemporanei</a></h4>
+                            <p>Scopri come Atelier d'Interni Creativi S.r.l. trasforma gli spazi con soluzioni d'arredo su misura</p>
+                            <p><p>Nell'era dell'innovazione e della sostenibilità, l'arredamento commerciale unico è diventato una necessità per le aziende che desiderano distinguersi. Atelier d'Interni Creativi S.r.l. si pone all'avanguardia nel settore, offrendo soluzioni person...</p>
+                            <a href="articolo_5_arredamento-commerciale-unico-innovazione-sostenibile-per-spazi-contemporanei.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_6_sostenibilità-nellarredamento-innovazione-e-design-su-misura.html">Sostenibilità nell'Arredamento: Innovazione e Design Su Misura</a></h4>
+                                <p>Scopri come Atelier d'Interni Creativi S.r.l. trasforma spazi con soluzioni d'arredo sostenibili e personalizzate.</p>
+                                <p><p>Nell'era dell'ecoconsapevolezza, la sostenibilità nell'arredamento è diventata una priorità non solo per i produttori ma anche per i consumatori. Atelier d'Interni Creativi S.r.l. si distingue nel settore grazie alla sua dedizione a progettare e r...</p>
+                                <a href="articolo_6_sostenibilità-nellarredamento-innovazione-e-design-su-misura.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_5_main_c3993021.png" alt="Immagine per Arredamento Commerciale Unico: Innovazione Sostenibile per Spazi Contemporanei">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_7_idee-di-design-dinterni-per-spazi-su-misura-linnovazione-di-atelier-dinterni-creativi-srl.html">Idee di Design d'Interni per Spazi Su Misura: L'Innovazione di Atelier d'Interni Creativi S.r.l.</a></h4>
+                            <p>Scopri le soluzioni d'arredo sostenibili e personalizzate per ambienti residenziali e commerciali</p>
+                            <p><p>Nel dinamico mondo della progettazione d'interni, distinguersi diventa essenziale per creare spazi che non siano solo funzionali, ma anche esteticamente appaganti e sostenibili. Atelier d'Interni Creativi S.r.l. offre un approccio innovativo e su ...</p>
+                            <a href="articolo_7_idee-di-design-dinterni-per-spazi-su-misura-linnovazione-di-atelier-dinterni-creativi-srl.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_8_progettare-lavvenire-larredo-eco-friendly-con-atelier-dinterni-creativi-srl.html">Progettare l'Avvenire: L'Arredo Eco-Friendly con Atelier d'Interni Creativi S.r.l.</a></h4>
+                                <p>Scopri come l'arredo eco-friendly sta rivoluzionando gli spazi residenziali e commerciali con soluzioni su misura</p>
+                                <p><p>Nell'era dell'attenzione crescente verso la sostenibilità, l'arredo eco-friendly si pone come una soluzione imprescindibile per chi desidera un ambiente che rispetti l'ambiente senza sacrificare lo stile e la funzionalità. Atelier d'Interni Creati...</p>
+                                <a href="articolo_8_progettare-lavvenire-larredo-eco-friendly-con-atelier-dinterni-creativi-srl.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_7_main_1d3b7e45.png" alt="Immagine per Idee di Design d'Interni per Spazi Su Misura: L'Innovazione di Atelier d'Interni Creativi S.r.l.">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_9_esplora-la-creatività-in-design-dinterni-con-atelier-dinterni-creativi-srl.html">Esplora la Creatività in Design d'Interni con Atelier d'Interni Creativi S.r.l.</a></h4>
+                            <p>Progettazione e realizzazione di soluzioni d'arredo su misura e sostenibili</p>
+                            <p><p>Oggi più che mai, la creatività in design d'interni gioca un ruolo cruciale nella trasformazione degli spazi, siano essi residenziali o commerciali. Atelier d'Interni Creativi S.r.l. è all'avanguardia in questo settore, con un focus particolare su...</p>
+                            <a href="articolo_9_esplora-la-creatività-in-design-dinterni-con-atelier-dinterni-creativi-srl.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_10_innovazioni-nel-design-sostenibile-per-spazi-su-misura.html">Innovazioni nel Design Sostenibile per Spazi su Misura</a></h4>
+                                <p>Esplorando Le Tendenze del Design Sostenibile con Atelier d'Interni Creativi S.r.l.</p>
+                                <p><p>Nel mondo moderno del design, le <strong>innovazioni nel design sostenibile</strong> stanno cambiando il modo in cui viviamo e lavoriamo. La sostenibilità è diventata un elemento essenziale nel campo della progettazione d'interni, sia per gli spaz...</p>
+                                <a href="articolo_10_innovazioni-nel-design-sostenibile-per-spazi-su-misura.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_9_main_93679e73.png" alt="Immagine per Esplora la Creatività in Design d'Interni con Atelier d'Interni Creativi S.r.l.">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_11_progettazione-spazi-commerciali-soluzioni-su-misura-da-atelier-dinterni-creativi-srl.html">Progettazione Spazi Commerciali: Soluzioni su Misura da Atelier d'Interni Creativi S.r.l.</a></h4>
+                            <p>Esplora il Design Sostenibile e Innovativo per i Tuoi Ambienti di Lavoro</p>
+                            <p><p>Nell'era odierna, creare un ambiente commerciale accattivante e funzionale è cruciale per il successo di qualsiasi impresa. Atelier d'Interni Creativi S.r.l. si distingue per la <strong>progettazione spazi commerciali</strong> che non solo rispond...</p>
+                            <a href="articolo_11_progettazione-spazi-commerciali-soluzioni-su-misura-da-atelier-dinterni-creativi-srl.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_12_arredamento-funzionale-su-misura-la-soluzione-perfetta-per-i-tuoi-spazi.html">Arredamento Funzionale su Misura: La Soluzione Perfetta per i Tuoi Spazi</a></h4>
+                                <p>Scopri come Atelier d'Interni Creativi S.r.l. trasforma spazi con design sostenibile e innovativo</p>
+                                <p><p>In un mondo che evolve rapidamente, trasformare gli ambienti domestici e lavorativi in spazi funzionali, esteticamente gradevoli e sostenibili è una sfida affascinante. Atelier d'Interni Creativi S.r.l. si pone all'avanguardia in questo settore, e...</p>
+                                <a href="articolo_12_arredamento-funzionale-su-misura-la-soluzione-perfetta-per-i-tuoi-spazi.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_11_main_301835d7.png" alt="Immagine per Progettazione Spazi Commerciali: Soluzioni su Misura da Atelier d'Interni Creativi S.r.l.">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_13_consulenza-arredo-dinterni-soluzioni-su-misura-per-spazi-residenziali-e-commerciali.html">Consulenza Arredo d'Interni: Soluzioni su Misura per Spazi Residenziali e Commerciali</a></h4>
+                            <p>Scopri come Atelier d'Interni Creativi S.r.l. trasforma gli spazi con design sostenibile e innovativo</p>
+                            <p><p>Nel mondo del design d'interni, creare uno spazio che rifletta la personalità e le esigenze uniche di un cliente è una vera arte. 'Atelier d'Interni Creativi S.r.l.' introduce un approccio innovativo alla <strong>consulenza arredo d'interni</stron...</p>
+                            <a href="articolo_13_consulenza-arredo-dinterni-soluzioni-su-misura-per-spazi-residenziali-e-commerciali.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_14_interior-design-su-misura-innovazione-e-sostenibilità-con-atelier-dinterni-creativi-srl.html">Interior Design su Misura: Innovazione e Sostenibilità con Atelier d'Interni Creativi S.r.l.</a></h4>
+                                <p>Soluzioni d'arredo personalizzate per spazi residenziali e commerciali</p>
+                                <p><p>Nel panorama dell'arredamento contemporaneo, l'<strong>interior design su misura</strong> emerge come una risposta sofisticata e su misura alle esigenze dei consumatori più esigenti. Atelier d'Interni Creativi S.r.l. si posiziona come leader di qu...</p>
+                                <a href="articolo_14_interior-design-su-misura-innovazione-e-sostenibilità-con-atelier-dinterni-creativi-srl.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="../placeholder_article_image.jpeg" alt="Immagine per Consulenza Arredo d'Interni: Soluzioni su Misura per Spazi Residenziali e Commerciali">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_15_trend-design-sostenibile-soluzioni-darredo-su-misura-da-atelier-dinterni-creativi-srl.html">Trend Design Sostenibile: Soluzioni d'Arredo su Misura da Atelier d'Interni Creativi S.r.l.</a></h4>
+                            <p>Esplorazione dei benefici e dell'approccio innovativo nel design sostenibile</p>
+                            <p><p>Nel panorama sempre più competitivo del design d'interni, <strong>Atelier d'Interni Creativi S.r.l.</strong> si distingue per la sua dedizione alla <em>progettazione e realizzazione di soluzioni d'arredo su misura</em>, con un focus particolare su...</p>
+                            <a href="articolo_15_trend-design-sostenibile-soluzioni-darredo-su-misura-da-atelier-dinterni-creativi-srl.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_16_arredo-personalizzato-per-aziende-soluzioni-su-misura-per-spazi-innovativi-e-sostenibili.html">Arredo Personalizzato per Aziende: Soluzioni su Misura per Spazi Innovativi e Sostenibili</a></h4>
+                                <p>Scopri come Atelier d'Interni Creativi S.r.l. rivoluziona l'arredo aziendale con design personalizzati e sostenibili.</p>
+                                <p><p>Nel mondo dinamico del design d'interni, l'arredo personalizzato per aziende sta emergendo come una strategia vincente per trasformare spazi di lavoro e aree commerciali. Atelier d'Interni Creativi S.r.l., un leader nel settore, si distingue per l...</p>
+                                <a href="articolo_16_arredo-personalizzato-per-aziende-soluzioni-su-misura-per-spazi-innovativi-e-sostenibili.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_15_main_25257d1b.png" alt="Immagine per Trend Design Sostenibile: Soluzioni d'Arredo su Misura da Atelier d'Interni Creativi S.r.l.">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_17_estetica-e-funzionalità-nellarredamento-soluzioni-su-misura-e-sostenibili.html">Estetica e Funzionalità nell'Arredamento: Soluzioni su Misura e Sostenibili</a></h4>
+                            <p>Come il Design Innovativo di Atelier d'Interni Creativi S.r.l. Trasforma Spazi Residenziali e Commerciali</p>
+                            <p><p>Nel mondo dell'interior design contemporaneo, l'equilibrio tra estetica e funzionalità nell'arredamento è fondamentale per creare ambienti che siano non solo belli da vedere, ma anche pratici da vivere. Atelier d'Interni Creativi S.r.l. si disting...</p>
+                            <a href="articolo_17_estetica-e-funzionalità-nellarredamento-soluzioni-su-misura-e-sostenibili.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_18_materiali-eco-sostenibili-per-mobili-innovazione-e-sostenibilità-nellarredo-su-misura.html">Materiali Eco-Sostenibili per Mobili: Innovazione e Sostenibilità nell'Arredo su Misura</a></h4>
+                                <p>Scopri come Atelier d'Interni Creativi S.r.l. utilizza materiali eco-sostenibili per trasformare i tuoi spazi</p>
+                                <p><p>In un'epoca in cui la sostenibilità ambientale gioca un ruolo cruciale nelle decisioni d'acquisto, scegliere arredi che rispettino l'ambiente non è solo una moda, ma una necessità. Atelier d'Interni Creativi S.r.l., leader nella progettazione di s...</p>
+                                <a href="articolo_18_materiali-eco-sostenibili-per-mobili-innovazione-e-sostenibilità-nellarredo-su-misura.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_17_main_d019825f.png" alt="Immagine per Estetica e Funzionalità nell'Arredamento: Soluzioni su Misura e Sostenibili">
+                    </div>
+                </div>
+            
+                
+                
+                
+                <div class="article-group">
+                    <div class="article-text-container"> 
+                        <div class="article-card">
+                            <h4><a href="articolo_19_progetti-di-arredo-innovativi-per-spazi-residenziali-e-commerciali.html">Progetti di Arredo Innovativi per Spazi Residenziali e Commerciali</a></h4>
+                            <p>Progettazione sostenibile e creativa con soluzioni su misura</p>
+                            <p><p>Nell'era moderna, il design d'interni su misura sta vivendo una rinascita, con una crescente attenzione verso i progetti di arredo innovativi che uniscono estetica e funzionalità. Atelier d'Interni Creativi S.r.l. è leader nel campo della progetta...</p>
+                            <a href="articolo_19_progetti-di-arredo-innovativi-per-spazi-residenziali-e-commerciali.html" class="read-more-btn">Leggi di più &raquo;</a>
+                        </div>
+                        
+                            <div class="article-card">
+                                <h4><a href="articolo_20_consigli-di-design-per-casa-soluzioni-su-misura-e-sostenibili.html">Consigli di Design per Casa: Soluzioni su Misura e Sostenibili</a></h4>
+                                <p>Guide pratiche per trasformare gli spazi abitativi con design innovativi e sostenibili</p>
+                                <p><p>Progettare la casa dei sogni è un desiderio comune, ma spesso la sfida risiede nel conciliare estetica, funzionalità e sostenibilità. In questo panorama, l'esperienza e la creatività di Atelier d'Interni Creativi S.r.l. si rivelano strumenti prezi...</p>
+                                <a href="articolo_20_consigli-di-design-per-casa-soluzioni-su-misura-e-sostenibili.html" class="read-more-btn">Leggi di più &raquo;</a>
+                            </div>
+                        
+                    </div> 
+                    <div class="article-image-container">
+                        <img src="images/article_dalle_19_main_3b135860.png" alt="Immagine per Progetti di Arredo Innovativi per Spazi Residenziali e Commerciali">
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-social-links">
+            
+                <a href="https://www.instagram.com/mmatteooballiuu/" target="_blank" rel="noopener noreferrer" class="instagram-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            
+            
+                <a href="https://www.facebook.com/AtelierInterniCreativiFirenze/" target="_blank" rel="noopener noreferrer" class="facebook-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            
+            
+                <a href="https://g.page/r/atelier-interni-creativi-firenze" target="_blank" rel="noopener noreferrer" class="google-icon">
+                    <i class="fab fa-google"></i>
+                </a>
+            
+        </div>
+        
+        <p>&copy; now()|datetimeformat('%Y') Atelier d'Interni Creativi S.r.l.</p>
+        <p>P.IVA: IT08765432109</p>
+        <p>Indirizzo: </p>
+        <p>Telefono: Fisso: +39 055 1234567, Mobile: +39 347 9876543</p>
+        <p>Email: <a href="mailto:contatto@atelierinternicreativi.it">contatto@atelierinternicreativi.it</a></p>
+        <p><a href="https://www.atelierinternicreativi.it/privacy-policy.html">Cookie Policy</a></p>
+    </footer>
+</body>
+</html>
